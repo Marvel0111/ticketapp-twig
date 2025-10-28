@@ -1,0 +1,35 @@
+{% extends "layout.twig" %}
+{% block content %}
+<section class="layout">
+  <nav class="topnav">
+    <div class="brand">Ticket App</div>
+    <div class="nav-actions">
+      <a href="/tickets.php" class="btn small">Tickets</a>
+      <button id="logoutBtn" class="btn small btn-ghost">Logout</button>
+    </div>
+  </nav>
+  <main class="container">
+    <h2>Dashboard</h2>
+    <div class="stats-grid">
+      <div class="card stat-card">
+        <h3>Total Tickets</h3>
+        <p id="totalCount">0</p>
+      </div>
+      <div class="card stat-card">
+        <h3>Open</h3>
+        <p id="openCount">0</p>
+      </div>
+      <div class="card stat-card">
+        <h3>Closed</h3>
+        <p id="closedCount">0</p>
+      </div>
+    </div>
+  </main>
+</section>
+<script>
+  // mark protected so app.js will check session
+  document.addEventListener('DOMContentLoaded', function(){
+    window.pageProtected = true;
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+{% block content %}
+<section class="hero">
+    <div class="wave-bg"></div>
+    <div class="circle-decor"></div>
+    <div class="circle-decor circle-decor--left"></div>
+    <h1>Ticket App</h1>
+    <p>Manage your tickets seamlessly across all platforms.</p>
+    <div class="cta-buttons">
+        <a href="/auth/login.php" class="btn">Login</a>
+        <a href="/auth/signup.php" class="btn">Get Started</a>
+    </div>
+</section>
+<section class="features">
+    <div class="card">Easy Ticket Management</div>
+    <div class="card">Secure Authentication</div>
+</section>
+{% endblock %}
